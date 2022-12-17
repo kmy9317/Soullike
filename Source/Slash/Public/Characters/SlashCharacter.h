@@ -82,6 +82,8 @@ protected:
 	void HitReactEnd();
 
 private:	
+	bool IsUnoccupied();
+	void SetHUDHealth();
 
 	// Character Components
 
