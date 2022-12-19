@@ -118,7 +118,6 @@ void AEnemy::Attack()
 
 bool AEnemy::CanAttack()
 {
-
 	bool bCanAttack =
 		IsInsideAttackRadius() &&
 		!IsAttacking() &&
