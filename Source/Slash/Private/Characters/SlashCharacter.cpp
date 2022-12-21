@@ -103,7 +103,7 @@ void ASlashCharacter::AddGold(ATreasure* Treasure)
 {
 	if (Attributes && SlashOverlay)
 	{
-		Attributes->AddSouls(Treasure->GetGold());
+		Attributes->AddGold(Treasure->GetGold());
 		SlashOverlay->SetGold(Attributes->GetGold());
 	}
 }
