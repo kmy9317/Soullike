@@ -59,6 +59,11 @@ void ABaseCharacter::PlayHitReactMontage(const FName& SectionName)
 	}
 }
 
+void ABaseCharacter::PlayDodgeMontage()
+{
+	PlayMontageSection(DodgeMontage, FName("Default"));
+}
+
 void ABaseCharacter::DirectionalHitReact(const FVector& ImpactPoint)
 {
 	const FVector Forward = GetActorForwardVector();
@@ -221,6 +226,10 @@ void ABaseCharacter::DisableMeshCollision()
 void ABaseCharacter::AttackEnd()
 {
 
+}
+
+void ABaseCharacter::DodgeEnd()
+{
 }
 
 void ABaseCharacter::Tick(float DeltaTime)

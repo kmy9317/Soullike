@@ -55,6 +55,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category = Input)
 	UInputAction* AttackAction;
 
+	UPROPERTY(EditAnywhere, Category = Input)
+	UInputAction* DodgeAction;
+
 	//
 	// callbacks for input
 	//
@@ -63,10 +66,12 @@ protected:
 	void Look(const FInputActionValue& Value);
 	void EKeyPressed();
 	virtual void Attack() override;
+	void Dodge();
 
 	// Combat
 	void EquipWeapon(AWeapon* Weapon);
 	virtual void AttackEnd() override;
+	virtual void DodgeEnd() override;
 	virtual bool CanAttack() override;
 	void PlayEquipMontage(const FName& SectionName);
 	virtual void Die() override;
